@@ -42,7 +42,7 @@ console.log(palavra)
   '[Arquitetura] Plano que se faz antes do início de uma obra, com as descrições, cálculos, orçamento: o projeto de uma igreja.',
   'Escritura provisória de um texto.'
 ] } ],
-  version: '1.2.5',
+  version: 'versionPackage',
   etimologia: 'Do latim projectus.us.',
   frases: null,
   plural: 'projetos',
