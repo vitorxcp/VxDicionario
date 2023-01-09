@@ -1,0 +1,39 @@
+{
+  "name": "vxdicionario",
+  "version": "1.3.0",
+  "description": "Este pacote foi criado e desenvolvido para pegar as informações de https://www.dicio.com.br/ e formatadas para json, sendo assim isto fica muito mais fácil de usar em qualquer aplicação.",
+  "release": {
+    "repositoryUrl": "https://github.com/vitorxcp/VxDicionario"
+  },
+  "markdown": "github",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
+  "keywords": [
+    "dicio",
+    "dicionario",
+    "portugues",
+    "brasil",
+    "vxdicionario"
+  ],
+  "author": {
+    "name": "vitor_xp",
+    "url": "https://vitorxp.squareweb.app/",
+    "email": "vitorxp.contato@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "colors": "^1.4.0",
+    "desacentuador": "^1.0.0",
+    "node-fetch": "^2.6.7",
+    "vxdicionario": "^1.2.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitorxcp/VxDicionario.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vitorxcp/VxDicionario/issues"
+  },
+  "homepage": "https://github.com/vitorxcp/VxDicionario#readme"
+}
