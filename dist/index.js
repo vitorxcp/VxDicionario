@@ -45,9 +45,9 @@ module.exports = async (termo) => {
     });
     const $ = (0, cheerio_1.load)(req, { lowerCaseTags: true }, true);
     if ($("title").text() === "Ocorreu um Erro")
-        return Object.assign({}, {httpsResponse: "0ms", status: 404, data: [{classe: null, significados: null}] }, defaults);
+        return Object.assign({}, { status: 404, httpsResponse: "0ms", data: [{classe: null, significados: null}] }, defaults);
     else {
-        const result = Object.assign({}, {httpsResponse:""+(time_2-time_1)+"ms", status: 200, data: [] }, defaults);
+        const result = Object.assign({}, {status: 200, httpsResponse:""+(time_2-time_1)+"ms", data: [] }, defaults);
         result.frases = null;
         result.separacaoSilabica = [];
         result.sinonimos = null;

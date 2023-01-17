@@ -34,8 +34,8 @@ console.log(palavra)
 > Resultado:
 ```js
 {
-  httpsResponse: '2351ms',
   status: 200,
+  httpsResponse: '2351ms',
   data: [ { classe: 'substantivo masculino', significados: [
   'Plano; planejamento que se faz com a intenção de realizar ou desenvolver alguma coisa: projeto de lei.',
   'Esquema; noção inicial, escrita e detalhada, do que se pretende desenvolver; aquilo que se pretende realizar, de acordo com esse esquema: projeto de pesquisa; projeto de limpeza do Rio Tietê.',
