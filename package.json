@@ -1,6 +1,6 @@
 {
   "name": "vxdicionario",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Pacote para consultar informações do https://www.dicio.com.br/ e retornar em JSON.",
   "main": "dist/index.js",
   "module": "dist/index.js",

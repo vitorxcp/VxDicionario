@@ -8,26 +8,33 @@ Biblioteca Node.js para consultar o [Dicio](https://www.dicio.com.br/) e retorna
 
 ## Sumário
 
-- [O que a biblioteca faz](#o-que-a-biblioteca-faz)
-- [Instalação](#instalação)
-- [Requisitos](#requisitos)
-- [Uso rápido](#uso-rápido)
-- [Como funciona](#como-funciona)
-- [API](#api)
-- [Opções](#opções)
-- [Formato da resposta](#formato-da-resposta)
-- [Tratamento de erros](#tratamento-de-erros)
-- [Cache](#cache)
-- [Busca em lote](#busca-em-lote)
-- [Sugestões](#sugestões)
-- [Palavra do dia e palavra aleatória](#palavra-do-dia-e-palavra-aleatória)
-- [CLI](#cli)
-- [TypeScript](#typescript)
-- [Estrutura do projeto](#estrutura-do-projeto)
-- [Desenvolvimento](#desenvolvimento)
-- [Testes](#testes)
-- [O que mudou na 2.0.0](#o-que-mudou-na-200)
-- [Licença](#licença)
+- [VxDicionario](#vxdicionario)
+  - [Sumário](#sumário)
+  - [O que a biblioteca faz](#o-que-a-biblioteca-faz)
+  - [Instalação](#instalação)
+  - [Requisitos](#requisitos)
+  - [Uso rápido](#uso-rápido)
+  - [Como funciona](#como-funciona)
+  - [API](#api)
+    - [`VxDicionario(termo, options?)`](#vxdicionariotermo-options)
+    - [`VxDicionario.search(termo, options?)`](#vxdicionariosearchtermo-options)
+    - [`VxDicionario.searchMany(termos, options?)`](#vxdicionariosearchmanytermos-options)
+    - [`VxDicionario.suggest(termo, options?)`](#vxdicionariosuggesttermo-options)
+    - [`VxDicionario.wordOfDay(options?)`](#vxdicionariowordofdayoptions)
+    - [`VxDicionario.randomWord(options?)`](#vxdicionariorandomwordoptions)
+    - [`VxDicionario.clearCache()`](#vxdicionarioclearcache)
+  - [Opções](#opções)
+  - [Formato da resposta](#formato-da-resposta)
+  - [Tratamento de erros](#tratamento-de-erros)
+  - [Cache](#cache)
+  - [Busca em lote](#busca-em-lote)
+  - [Sugestões](#sugestões)
+  - [Palavra do dia e palavra aleatória](#palavra-do-dia-e-palavra-aleatória)
+  - [CLI](#cli)
+  - [TypeScript](#typescript)
+  - [O que mudou na 2.0.0](#o-que-mudou-na-200)
+  - [Doação](#doação)
+  - [Licença](#licença)
 
 ## O que a biblioteca faz
 
@@ -382,76 +389,6 @@ Funções e interfaces exportadas:
 - `SearchOptions`
 - `WordData`
 - `OtherInfo`
-
-## Estrutura do projeto
-
-```text
-VxDicionario/
-├── src/
-│   ├── index.ts
-│   ├── http.ts
-│   ├── parse.ts
-│   ├── cache.ts
-│   └── types.ts
-├── dist/
-├── types/
-├── tests/
-├── bin/
-├── .github/workflows/
-├── package.json
-├── tsconfig.json
-└── README.md
-```
-
-Responsabilidades:
-
-- `src/index.ts`: API pública e orquestração.
-- `src/http.ts`: fetch, slug, retry, timeout e User-Agent.
-- `src/parse.ts`: parse do HTML do Dicio.
-- `src/cache.ts`: cache em memória com TTL.
-- `src/types.ts`: interfaces TypeScript.
-- `bin/vxdicionario.js`: CLI.
-
-## Desenvolvimento
-
-Instale as dependências:
-
-```bash
-npm install
-```
-
-Compile o projeto:
-
-```bash
-npm run build
-```
-
-Verifique tipos:
-
-```bash
-npm run typecheck
-```
-
-Execute os testes:
-
-```bash
-npm test
-```
-
-## Testes
-
-Os testes usam o runner nativo do Node.js (`node:test`) e consultam o Dicio real. Por isso, exigem conexão com a internet.
-
-Casos cobertos:
-
-- busca de palavra existente;
-- palavra não encontrada;
-- entrada inválida;
-- busca em lote;
-- sugestões;
-- palavra do dia;
-- palavra aleatória;
-- limpeza de cache.
 
 ## O que mudou na 2.0.0
 
