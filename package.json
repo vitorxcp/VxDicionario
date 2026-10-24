@@ -1,13 +1,34 @@
 {
   "name": "vxdicionario",
-  "version": "1.3.0",
-  "description": "Este pacote foi criado e desenvolvido para pegar as informações de https://www.dicio.com.br/ e formatadas para json, sendo assim isto fica muito mais fácil de usar em qualquer aplicação.",
-  "release": {
-    "repositoryUrl": "https://github.com/vitorxcp/VxDicionario"
-  },
-  "markdown": "github",
+  "version": "2.0.0",
+  "description": "Pacote para consultar informações do https://www.dicio.com.br/ e retornar em JSON.",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "vxdicionario": "bin/vxdicionario.js"
+  },
+  "files": [
+    "dist",
+    "types",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "node --test tests/*.test.mjs",
+    "prepublishOnly": "npm run build"
+  },
   "keywords": [
     "dicio",
     "dicionario",
@@ -21,13 +42,15 @@
     "email": "vitorxp.contato@gmail.com"
   },
   "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.12",
-    "colors": "^1.4.0",
-    "desacentuador": "^1.0.0",
-    "e": "^0.2.2",
-    "node-fetch": "^2.6.7",
-    "vxdicionario": "^1.2.6"
+    "cheerio": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^5.9.3"
   },
   "repository": {
     "type": "git",
